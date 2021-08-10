@@ -1,0 +1,26 @@
+try:
+    t=int(input())
+    while(t):
+        n=int(input())
+        l=list(map(int,input().split()))
+        if(n<3):
+            print("first")
+        l.sort(reverse=True)
+        first=0
+        second=0
+        first+=l[0]
+        second+=l[1]+l[2]
+        for i in range(3,len(l)):
+            if(i%2==1):
+                first+=l[i]
+            else:
+                second+=l[i]
+        if(first>second):
+            print("first")
+        elif(second>first):
+            print("second")
+        elif(first==second):
+            print("draw")
+        t-=1
+except:
+    pass

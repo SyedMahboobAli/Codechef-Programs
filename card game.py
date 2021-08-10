@@ -1,0 +1,19 @@
+try:
+    t=int(input())
+    while(t):
+        pc,pr=map(int,input().split())
+        a=(pc//9)
+        if((pc%9)>0):
+            a+=1
+        b=(pr//9)
+        if((pr%9)>0):
+            b+=1
+        if(a==b):
+            print(1,b)
+        elif(a>b):
+            print(1,b)
+        else:
+            print(0,a)
+        t-=1
+except:
+    pass
